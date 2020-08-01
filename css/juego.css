@@ -16,4 +16,6 @@ canvas {
   color: white;
   font-family: monospace;
   visibility: hidden;
+  font-size: 3em;
+  cursor: crosshair;
 }

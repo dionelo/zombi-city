@@ -24,6 +24,25 @@ var Enemigo = function (sprite, x, y, ancho, alto, velocidad, rangoMov) {
   this.atacando = false;
 }
 
+Enemigo.prototype.mover = function() {
+  
+  if (Math.random() < 0.5) {
+    this.x -= this.velocidad;
+    this.y -= this.velocidad;
+  } else {
+    this.y += this.velocidad;
+    this.x -= this.velocidad;
+  }
+
+  if ((this.x < this.rangoMov.desdeX) || (this.x > this.rangoMov.hastaX)){
+    this.velocidad *= -1;
+  }
+  
+  if ((this.y < this.rangoMov.desdeY) || (this.y > this.rangoMov.hastaY)) {
+    this.y = this.rangoMov.desdeY + (this.rangoMov.hastaY - this.rangoMov.desdeY)/2;
+  }
+}
+
 /* Por defecto, un enemigo sabe responder al mensaje de atacar
 sacando una vida al jugador.*/
 Enemigo.prototype.atacar = function (jugador) {
