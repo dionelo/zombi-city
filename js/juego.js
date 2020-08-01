@@ -28,8 +28,6 @@ const Juego = {
 		new Obstaculo('imagenes/auto_verde_derecha.png', 350, 385, 30, 15, 2),
 		new Obstaculo('imagenes/auto_verde_derecha.png', 800, 85, 30, 15, 2),
 		new Obstaculo('imagenes/auto_verde_derecha.png', 400, 130, 30, 15, 2)
-
-		
 	],
 
 	bordes: [
@@ -156,7 +154,6 @@ Juego.capturarMovimiento = function(tecla) {
 		movY = velocidad
 	}
 
-	// Si se puede mover hacia esa posicion hay que hacer efectivo este movimiento
 	if (this.chequearColisiones(movX + this.jugador.x, movY + this.jugador.y)) {
 		this.jugador.mover(movX, movY, rotacion);
 	}
