@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
-	<!-- Incluir los archivos donde este guardado el estilo en formato css -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zombi City</title>
 	<link rel="stylesheet" href="css/juego.css">
-	<!-- Incluir los archivos donde este el codigo Javascript del juego -->
+</head>
+<body>
+
+	<input type="button" value="< Hace clic para continuar >" onclick="continuar()" class="boton-recargar" id="boton">
+
+	<audio src="audio/Master-of-puppets.mp3" autoplay></audio>
+
+	<!-- scripts -->
 	<script src='js/resources.js'> </script>
 	<script src='js/jugador.js'> </script>
 	<script src='js/dibujante.js'> </script>
@@ -15,12 +23,6 @@
 	<script src='js/zombie_camionero.js'></script>
 	<script src='js/zombie_ovni.js'></script>
 	<script src='js/juego.js'> </script>
-</head>
-<body>
-
-	<input type="button" value="< Hace clic para continuar >" onclick="continuar()" class="boton-recargar" id="boton">
-	<audio src="audio/Master-of-puppets.mp3" autoplay></audio>
 	
-
 </body>
 </html>
